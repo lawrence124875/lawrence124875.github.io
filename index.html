@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>LC Lab</title>
+<meta name="description" content="LC Lab — 獨立開發的 Android App：智慧聽覺巡航、謙卦。Independent Android apps by Lawrence Chang.">
+<style>
+  :root {
+    color-scheme: light dark;
+    --bg: #F6F5F1;
+    --card: #FFFFFF;
+    --text: #23231F;
+    --muted: #6A6A62;
+    --line: #E2E0D8;
+    --accent: #3F7A5E;
+    --chip: #EEF3EF;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --bg: #17181A;
+      --card: #212226;
+      --text: #ECEBE6;
+      --muted: #A3A29B;
+      --line: #34353A;
+      --accent: #8CC3A6;
+      --chip: #2A332E;
+    }
+  }
+  * { box-sizing: border-box; }
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--text);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Noto Sans TC", "PingFang TC", "Microsoft JhengHei", sans-serif;
+    line-height: 1.7;
+  }
+  main { max-width: 760px; margin: 0 auto; padding: 56px 16px 40px; }
+  h1 { font-size: 2.4em; letter-spacing: 0.04em; margin: 0 0 8px; }
+  .lead { margin: 0; font-size: 1.05em; }
+  .lead-en { margin: 2px 0 0; color: var(--muted); }
+  h2 { font-size: 1.05em; color: var(--muted); font-weight: 600; margin: 44px 0 14px; letter-spacing: 0.06em; }
+  .apps { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; }
+  .card {
+    background: var(--card);
+    border: 1px solid var(--line);
+    border-radius: 14px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+  }
+  .card h3 { margin: 0; font-size: 1.2em; line-height: 1.4; }
+  .card .sub { color: var(--muted); font-size: 0.92em; margin: 0; }
+  .card p { margin: 6px 0 0; font-size: 0.95em; }
+  .card p.en { margin: 0; color: var(--muted); font-size: 0.9em; }
+  .links { margin-top: auto; padding-top: 14px; display: flex; flex-wrap: wrap; gap: 8px; }
+  .links a, .links span {
+    font-size: 0.88em;
+    padding: 5px 12px;
+    border-radius: 999px;
+    text-decoration: none;
+  }
+  .links a { background: var(--chip); color: var(--accent); }
+  .links a:hover { text-decoration: underline; }
+  .links span { border: 1px dashed var(--line); color: var(--muted); }
+  a { color: var(--accent); }
+  .contact p { margin: 0; }
+  footer { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); color: var(--muted); font-size: 0.88em; }
+</style>
+</head>
+<body>
+<main>
+  <header>
+    <h1>LC Lab</h1>
+    <p class="lead">一個人的小型 App 工作室，做簡單、安靜、對生活有幫助的 Android App。</p>
+    <p class="lead-en">A one-person studio making simple, calm Android apps that help with everyday life.</p>
+  </header>
+
+  <h2>App</h2>
+  <section class="apps">
+    <article class="card">
+      <h3>智慧聽覺巡航</h3>
+      <p class="sub">English Words Audio Cruise</p>
+      <p>背景朗讀英文核心單字，通勤、走路、做家事時雙語一起聽。</p>
+      <p class="en">Learn core English words by listening in the background, in your own language.</p>
+      <div class="links">
+        <a href="https://lawrence124875.github.io/english-learning-app/">隱私權政策 Privacy Policy</a>
+        <!-- 正式上架後補 Play 商店連結：https://play.google.com/store/apps/details?id=tw.bcc.englishapp -->
+        <span>Google Play 即將推出 · Coming soon</span>
+      </div>
+    </article>
+
+    <article class="card">
+      <h3>謙卦</h3>
+      <p class="sub">Qiangua · I Ching Cards</p>
+      <p>以《易經》六十四卦為題材的自我探索與反思卦卡。</p>
+      <p class="en">Self-reflection cards based on the 64 hexagrams of the I Ching.</p>
+      <div class="links">
+        <a href="https://lawrence124875.github.io/iching-cards/privacy.html">隱私權政策 Privacy Policy</a>
+        <!-- 正式上架後補 Play 商店連結：https://play.google.com/store/apps/details?id=com.lclab.qiangua -->
+        <span>Google Play 即將推出 · Coming soon</span>
+      </div>
+    </article>
+  </section>
+
+  <h2>聯絡 Contact</h2>
+  <section class="contact">
+    <p>Lawrence Chang：<a href="mailto:lawrence124875@gmail.com">lawrence124875@gmail.com</a></p>
+  </section>
+
+  <footer>LC Lab © 2026</footer>
+</main>
+</body>
+</html>
