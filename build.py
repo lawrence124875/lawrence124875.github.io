@@ -156,7 +156,7 @@ def build():
         source_note = f'<p class="note">{esc(t["ngsl_note"])}</p>' if "NGSL" in m["body"] else ""
         related = [x for x in by_lang_app[(lang, app)] if x[1] != slug]
         body = f"""<article>
-<p class="crumb"><a href="/{lang}/">{esc(t['back_home'])}</a> › {esc(t['apps'][app]['name'])}</p>
+<p class="crumb"><a href="/{lang}/">{esc(t['back_home'])}</a> {'‹' if t.get('dir') == 'rtl' else '›'} {esc(t['apps'][app]['name'])}</p>
 <h1>{esc(m['title'])}</h1>
 {top_note}
 {content}
