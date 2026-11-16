@@ -1,0 +1,53 @@
+name: Build and deploy site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: pip install markdown==3.7
+      - name: Build
+        run: python build.py | tee -a "$GITHUB_STEP_SUMMARY"
+      - name: Check every page has title, description, canonical
+        run: |
+          bad=0
+          for f in $(find _site/zh-TW _site/en -name index.html); do
+            for tag in '<title>' 'name="description"' 'rel="canonical"' 'hreflang="x-default"'; do
+              grep -q "$tag" "$f" || { echo "::error file=$f::missing $tag"; bad=1; }
+            done
+          done
+          python -c "import xml.dom.minidom as m; m.parse('_site/sitemap.xml')"
+          echo "Pages checked: $(find _site/zh-TW _site/en -name index.html | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          exit $bad
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+  deploy:
+    if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
+    needs: build
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - id: deployment
+        uses: actions/deploy-pages@v4

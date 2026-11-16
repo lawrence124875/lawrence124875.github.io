@@ -1,0 +1,68 @@
+{
+  "zh-TW": {
+    "html_lang": "zh-Hant-TW",
+    "site_name": "LC Lab",
+    "home_title": "LC Lab｜易經、塔羅與英文單字的入門教學",
+    "home_description": "LC Lab 的教學文章：易經起卦方法、塔羅記牌與牌陣、用聽的背英文單字。搭配謙卦、光穗塔羅、智慧聽覺巡航三個 Android App 實際練習。",
+    "home_lead": "一個人的小型 App 工作室。這裡整理易經、塔羅和英文單字的入門觀念與方法，想實際練習時，可以用對應的 App。",
+    "articles": "教學文章",
+    "download": "在 Google Play 下載",
+    "download_cta": "想實際練習？下載 {app}",
+    "reflection_note": "本文內容供自我反思與娛樂。",
+    "ngsl_note": "NGSL 出處：Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com，以 CC BY-SA 4.0 授權。",
+    "related": "延伸閱讀",
+    "back_home": "回首頁",
+    "lang_name": "繁體中文",
+    "other_langs": "其他語言",
+    "apps": {
+      "iching": {
+        "name": "謙卦",
+        "sub": "Qiangua · 易經卦卡",
+        "pitch": "以《易經》六十四卦為題材的自我反思卦卡，可用金錢卦、梅花易數等方式起卦。"
+      },
+      "tarot": {
+        "name": "光穗塔羅",
+        "sub": "AuraSpica Tarot",
+        "pitch": "塔羅、雷諾曼、符文的學習與自我反思工具，含入門課程與抽牌日記。"
+      },
+      "english": {
+        "name": "智慧聽覺巡航",
+        "sub": "English Words Audio Cruise",
+        "pitch": "用聽的背英文核心單字，通勤、走路、做家事時鎖螢幕也能播。"
+      }
+    }
+  },
+  "en": {
+    "html_lang": "en",
+    "site_name": "LC Lab",
+    "home_title": "LC Lab | Beginner Guides to the I Ching, Tarot and English Vocabulary",
+    "home_description": "Beginner guides from LC Lab: how to cast an I Ching hexagram, how to learn tarot cards and spreads, and how to learn English words by listening. Practice with three Android apps.",
+    "home_lead": "A one-person app studio. These guides explain the basics of the I Ching, tarot and English vocabulary. When you want to practice, try the matching app.",
+    "articles": "Guides",
+    "download": "Get it on Google Play",
+    "download_cta": "Ready to practice? Get {app}",
+    "reflection_note": "This article is for self-reflection and entertainment.",
+    "ngsl_note": "NGSL source: Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com, licensed under CC BY-SA 4.0.",
+    "related": "Related guides",
+    "back_home": "Home",
+    "lang_name": "English",
+    "other_langs": "Other languages",
+    "apps": {
+      "iching": {
+        "name": "Qiangua",
+        "sub": "I Ching Cards",
+        "pitch": "Self-reflection cards based on the 64 hexagrams of the I Ching, with coin and Plum Blossom casting."
+      },
+      "tarot": {
+        "name": "AuraSpica Tarot",
+        "sub": "Tarot · Lenormand · Runes",
+        "pitch": "Learn tarot, Lenormand and runes, with beginner lessons and a reading journal."
+      },
+      "english": {
+        "name": "English Words Audio Cruise",
+        "sub": "Learn words by listening",
+        "pitch": "Learn core English words by listening, even with your screen locked."
+      }
+    }
+  }
+}
