@@ -87,7 +87,7 @@ def lang_switch(lang, variants):
 def page(lang, title, description, canonical, variants, body):
     t = LANGS[lang]
     return f"""<!DOCTYPE html>
-<html lang="{t['html_lang']}">
+<html lang="{t['html_lang']}" dir="{t.get('dir', 'ltr')}">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
