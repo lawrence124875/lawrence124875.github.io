@@ -29,13 +29,13 @@ jobs:
       - name: Check every page has title, description, canonical
         run: |
           bad=0
-          for f in $(find _site/zh-TW _site/en -name index.html); do
+          for f in $(find $(ls -d _site/*/ | grep -E '/[a-z]{2}(-[A-Z]{2})?/$') -name index.html); do
             for tag in '<title>' 'name="description"' 'rel="canonical"' 'hreflang="x-default"'; do
               grep -q "$tag" "$f" || { echo "::error file=$f::missing $tag"; bad=1; }
             done
           done
           python -c "import xml.dom.minidom as m; m.parse('_site/sitemap.xml')"
-          echo "Pages checked: $(find _site/zh-TW _site/en -name index.html | wc -l)" >> "$GITHUB_STEP_SUMMARY"
+          echo "Pages checked: $(find $(ls -d _site/*/ | grep -E '/[a-z]{2}(-[A-Z]{2})?/$') -name index.html | wc -l)" >> "$GITHUB_STEP_SUMMARY"
           exit $bad
       - uses: actions/upload-pages-artifact@v3
         with:

@@ -6,7 +6,7 @@
 - Renders a home page per language at /<lang>/.
 - Writes sitemap.xml and robots.txt.
 
-Add a language: add an entry to src/langs.json and write articles under src/content/<lang>/.
+Add a language: add src/langs/<lang>.json ("order" sets its place in the language list) and write articles under src/content/<lang>/.
 Articles in different languages are paired by the same <app>/<slug> path (used for hreflang).
 """
 import html
@@ -32,7 +32,9 @@ REFLECTION_APPS = {"iching", "tarot"}
 # Paths at the repo root that are not part of the published site.
 SKIP = {".git", ".github", "_site", "src", "build.py", "HANDOFF.md", "README.md", ".gitignore"}
 
-LANGS = json.loads((SRC / "langs.json").read_text(encoding="utf-8"))
+LANGS = dict(sorted(
+    ((p.stem, json.loads(p.read_text(encoding="utf-8"))) for p in (SRC / "langs").glob("*.json")),
+    key=lambda kv: kv[1].get("order", 999)))
 CSS = (SRC / "style.css").read_text(encoding="utf-8")
 esc = html.escape
 

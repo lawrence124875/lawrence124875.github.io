@@ -4,7 +4,8 @@
 
 ## 結構
 - `build.py`：產生 `_site/`。原有手寫頁面（`index.html`、`tarot-cards/`、`terms/`、`app-ads.txt`）原樣複製，網址不變
-- `src/langs.json`：每種語言的介面文字、App 名稱與介紹；`dir` 可設 `rtl`（阿拉伯文）
+- `src/langs/<語言>.json`：每種語言一檔，介面文字、App 名稱與介紹；`order` 決定語言列表順序，`dir` 可設 `rtl`（阿拉伯文）。各語言分檔，平行的語言 PR 不會互相衝突
+- `src/style.css` 依 `lang` 切換中日韓泰阿字型
 - `src/content/<語言>/<app>/<slug>.md`：文章。app 只能是 `iching`、`tarot`、`english`
   - 前置欄位：`title`、`description`（必填）、`order`（排序）
   - 不同語言用相同的 `<app>/<slug>` 配對，自動產生 hreflang
@@ -26,7 +27,7 @@
 2. 西班牙文 es、葡萄牙文 pt、印尼文 id
 3. 泰文 th、越南文 vi、阿拉伯文 ar（`dir: rtl`）
 
-每種語言的做法：在 `src/langs.json` 加一筆，寫 19 篇到 `src/content/<語言>/`，slug 與繁中、英文相同；自審用語、事實與手機版面。
+每種語言的做法：新增 `src/langs/<語言>.json`，寫 19 篇到 `src/content/<語言>/`，slug 與繁中、英文相同；自審用語、事實與手機版面。
 
 ## 使用者手動事項
 1. **Pages 來源**：repo Settings → Pages → Build and deployment → Source 改成「GitHub Actions」（合併 PR 前做）
