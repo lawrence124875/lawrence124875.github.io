@@ -1,0 +1,34 @@
+{
+  "order": 30,
+  "html_lang": "ja",
+  "site_name": "LC Lab",
+  "home_title": "LC Lab｜易経・タロット・英単語のやさしい入門ガイド",
+  "home_description": "易経の占い方、タロットカードの覚え方とスプレッド、聞き流しで英単語を覚える方法を初心者向けに解説。3つのAndroidアプリで実際に練習できます。",
+  "home_lead": "ひとりで運営している小さなアプリ工房です。易経・タロット・英単語の基本をわかりやすくまとめています。実際に試したくなったら、対応するアプリをどうぞ。",
+  "articles": "入門ガイド",
+  "download": "Google Play で入手",
+  "download_cta": "実際に試してみる：{app}",
+  "reflection_note": "この記事は自己内省とエンターテインメントを目的としています。",
+  "ngsl_note": "NGSL出典：Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com（CC BY-SA 4.0）",
+  "related": "あわせて読みたい",
+  "back_home": "ホーム",
+  "lang_name": "日本語",
+  "other_langs": "ほかの言語",
+  "apps": {
+    "iching": {
+      "name": "謙卦",
+      "sub": "Qiangua · 易経カード",
+      "pitch": "易経の六十四卦をテーマにした内省用カード。コイン（擲銭法）や梅花心易で卦を立てられます。"
+    },
+    "tarot": {
+      "name": "AuraSpica Tarot",
+      "sub": "タロット・ルノルマン・ルーン",
+      "pitch": "タロット、ルノルマン、ルーンを学べる内省ツール。入門レッスンと占い日記つき。"
+    },
+    "english": {
+      "name": "English Words Audio Cruise",
+      "sub": "聞き流しで英単語",
+      "pitch": "英語の基本単語を耳で覚えるアプリ。通勤中や家事の合間、画面ロック中も再生できます。"
+    }
+  }
+}
