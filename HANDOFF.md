@@ -20,14 +20,16 @@
 - 開新分支發 PR，不直接推 main
 
 ## 進度
-- 繁中、英文：19 篇 × 2 語完成（謙卦 6、光穗塔羅 7、智慧聽覺巡航 6），PR #13
+- 11 語 × 19 篇全部寫完，各自一個 draft PR，base 都是 `content-site`：
+  繁中＋英文 #13（content-site → main）、日 #14、韓 #15、簡中 #16、西 #17、葡 #18、印尼 #19、泰 #20、越 #21、阿 #22
+- #22 另含 RTL 小修：`style.css` 改用 `border/padding-inline-start`、`build.py` 的 RTL 麵包屑改用 ‹
 
-## 待辦：其餘 9 語（每批 3 語，每種語言各自發 PR，一批審完再做下一批）
-1. 日文 ja、韓文 ko、簡中 zh-CN
-2. 西班牙文 es、葡萄牙文 pt、印尼文 id
-3. 泰文 th、越南文 vi、阿拉伯文 ar（`dir: rtl`）
+## 合併順序
+1. 先把 #14–#22 合併進 `content-site`（各 PR 只動自己的語言檔，不會互相衝突）
+2. 再合併 #13 到 main（合併前先做下方手動事項 1）
 
-每種語言的做法：新增 `src/langs/<語言>.json`，寫 19 篇到 `src/content/<語言>/`，slug 與繁中、英文相同；自審用語、事實與手機版面。
+## 後續可做
+- Search Console 有數據後，依各國曝光補文章或調整標題
 
 ## 使用者手動事項
 1. **Pages 來源**：repo Settings → Pages → Build and deployment → Source 改成「GitHub Actions」（合併 PR 前做）
