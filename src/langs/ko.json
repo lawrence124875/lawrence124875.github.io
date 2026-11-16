@@ -1,0 +1,34 @@
+{
+  "order": 40,
+  "html_lang": "ko",
+  "site_name": "LC Lab",
+  "home_title": "LC Lab | 주역·타로·영어 단어 입문 가이드",
+  "home_description": "주역 괘 뽑는 법, 타로 카드 외우는 법과 스프레드, 듣기로 영어 단어 외우는 법을 초보자 눈높이로 정리했습니다. 세 가지 Android 앱으로 직접 연습해 보세요.",
+  "home_lead": "혼자 운영하는 작은 앱 스튜디오입니다. 주역, 타로, 영어 단어의 기본 개념과 방법을 정리했어요. 직접 해 보고 싶을 때는 맞는 앱을 이용해 보세요.",
+  "articles": "입문 가이드",
+  "download": "Google Play에서 무료 다운로드",
+  "download_cta": "직접 연습해 보고 싶다면? {app} 무료 다운로드·무료 이용",
+  "reflection_note": "이 글은 자기 성찰과 재미를 위한 내용입니다.",
+  "ngsl_note": "NGSL 출처: Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com, CC BY-SA 4.0 라이선스.",
+  "related": "함께 읽으면 좋은 글",
+  "back_home": "홈",
+  "lang_name": "한국어",
+  "other_langs": "다른 언어",
+  "apps": {
+    "iching": {
+      "name": "Qiangua",
+      "sub": "주역 괘 카드",
+      "pitch": "주역 64괘를 바탕으로 한 자기 성찰 카드. 동전점과 매화역수로 괘를 뽑을 수 있습니다."
+    },
+    "tarot": {
+      "name": "AuraSpica Tarot",
+      "sub": "타로 · 르노르망 · 룬",
+      "pitch": "타로, 르노르망, 룬을 배우는 자기 성찰 도구. 입문 강의와 리딩 일기가 들어 있습니다."
+    },
+    "english": {
+      "name": "English Words Audio Cruise",
+      "sub": "듣기로 외우는 영어 단어",
+      "pitch": "핵심 영어 단어를 귀로 외우는 앱. 출퇴근길, 산책, 집안일 중에도 화면을 끈 채 들을 수 있어요."
+    }
+  }
+}
