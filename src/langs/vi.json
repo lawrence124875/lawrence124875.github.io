@@ -1,0 +1,34 @@
+{
+  "order": 90,
+  "html_lang": "vi",
+  "site_name": "LC Lab",
+  "home_title": "LC Lab | Hướng dẫn cơ bản về Kinh Dịch, Tarot và từ vựng tiếng Anh",
+  "home_description": "Bài hướng dẫn cho người mới từ LC Lab: cách gieo quẻ Kinh Dịch, cách học bài Tarot và trải bài, cách học từ vựng tiếng Anh bằng cách nghe. Thực hành cùng ba ứng dụng Android.",
+  "home_lead": "Một studio ứng dụng nhỏ do một người làm. Ở đây tổng hợp kiến thức nền tảng về Kinh Dịch, Tarot và từ vựng tiếng Anh. Khi muốn thực hành, hãy thử ứng dụng tương ứng.",
+  "articles": "Bài hướng dẫn",
+  "download": "Tải miễn phí trên Google Play",
+  "download_cta": "Muốn thực hành? Tải và dùng {app} miễn phí",
+  "reflection_note": "Bài viết này dành cho mục đích tự chiêm nghiệm và giải trí.",
+  "ngsl_note": "Nguồn NGSL: Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com, cấp phép CC BY-SA 4.0.",
+  "related": "Đọc thêm",
+  "back_home": "Trang chủ",
+  "lang_name": "Tiếng Việt",
+  "other_langs": "Ngôn ngữ khác",
+  "apps": {
+    "iching": {
+      "name": "Qiangua",
+      "sub": "Thẻ Kinh Dịch",
+      "pitch": "Bộ thẻ tự chiêm nghiệm dựa trên 64 quẻ Kinh Dịch, gieo quẻ bằng đồng xu hoặc Mai Hoa Dịch Số."
+    },
+    "tarot": {
+      "name": "AuraSpica Tarot",
+      "sub": "Tarot · Lenormand · Rune",
+      "pitch": "Học Tarot, Lenormand và Rune, có bài học cho người mới và nhật ký trải bài."
+    },
+    "english": {
+      "name": "English Words Audio Cruise",
+      "sub": "Học từ vựng bằng cách nghe",
+      "pitch": "Học từ vựng tiếng Anh cốt lõi bằng cách nghe, kể cả khi khóa màn hình."
+    }
+  }
+}
