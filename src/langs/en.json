@@ -1,0 +1,34 @@
+{
+  "order": 20,
+  "html_lang": "en",
+  "site_name": "LC Lab",
+  "home_title": "LC Lab | Beginner Guides to the I Ching, Tarot and English Vocabulary",
+  "home_description": "Beginner guides from LC Lab: how to cast an I Ching hexagram, how to learn tarot cards and spreads, and how to learn English words by listening. Practice with three Android apps.",
+  "home_lead": "A one-person app studio. These guides explain the basics of the I Ching, tarot and English vocabulary. When you want to practice, try the matching app.",
+  "articles": "Guides",
+  "download": "Free on Google Play",
+  "download_cta": "Ready to practice? {app} is free to download and use",
+  "reflection_note": "This article is for self-reflection and entertainment.",
+  "ngsl_note": "NGSL source: Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com, licensed under CC BY-SA 4.0.",
+  "related": "Related guides",
+  "back_home": "Home",
+  "lang_name": "English",
+  "other_langs": "Other languages",
+  "apps": {
+    "iching": {
+      "name": "Qiangua",
+      "sub": "I Ching Cards",
+      "pitch": "Self-reflection cards based on the 64 hexagrams of the I Ching, with coin and Plum Blossom casting."
+    },
+    "tarot": {
+      "name": "AuraSpica Tarot",
+      "sub": "Tarot · Lenormand · Runes",
+      "pitch": "Learn tarot, Lenormand and runes, with beginner lessons and a reading journal."
+    },
+    "english": {
+      "name": "English Words Audio Cruise",
+      "sub": "Learn words by listening",
+      "pitch": "Learn core English words by listening, even with your screen locked."
+    }
+  }
+}

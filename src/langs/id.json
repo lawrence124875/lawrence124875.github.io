@@ -1,0 +1,34 @@
+{
+  "order": 70,
+  "html_lang": "id",
+  "site_name": "LC Lab",
+  "home_title": "LC Lab | Panduan Pemula I Ching, Tarot, dan Kosakata Bahasa Inggris",
+  "home_description": "Panduan sederhana dari LC Lab: cara melempar I Ching, cara belajar kartu dan susunan tarot, serta cara menghafal kosakata bahasa Inggris lewat mendengar. Latihan langsung dengan tiga aplikasi Android.",
+  "home_lead": "Studio aplikasi kecil yang dikelola satu orang. Di sini kami merangkum dasar-dasar I Ching, tarot, dan kosakata bahasa Inggris. Kalau ingin langsung berlatih, coba aplikasinya.",
+  "articles": "Panduan",
+  "download": "Unduh gratis di Google Play",
+  "download_cta": "Ingin praktik? Unduh dan pakai {app} secara gratis",
+  "reflection_note": "Artikel ini untuk refleksi diri dan hiburan.",
+  "ngsl_note": "Sumber NGSL: Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com, berlisensi CC BY-SA 4.0.",
+  "related": "Baca juga",
+  "back_home": "Beranda",
+  "lang_name": "Bahasa Indonesia",
+  "other_langs": "Bahasa lain",
+  "apps": {
+    "iching": {
+      "name": "Qiangua",
+      "sub": "Kartu I Ching",
+      "pitch": "Kartu refleksi diri berdasarkan 64 heksagram I Ching, dengan metode koin dan Bunga Plum."
+    },
+    "tarot": {
+      "name": "AuraSpica Tarot",
+      "sub": "Tarot · Lenormand · Rune",
+      "pitch": "Belajar tarot, Lenormand, dan rune, lengkap dengan pelajaran pemula dan jurnal bacaan."
+    },
+    "english": {
+      "name": "English Words Audio Cruise",
+      "sub": "Hafal kosakata lewat mendengar",
+      "pitch": "Hafalkan kosakata inti bahasa Inggris lewat mendengar, bahkan saat layar terkunci."
+    }
+  }
+}

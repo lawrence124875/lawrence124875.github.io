@@ -1,0 +1,34 @@
+{
+  "order": 60,
+  "html_lang": "pt-BR",
+  "site_name": "LC Lab",
+  "home_title": "LC Lab | Guias para iniciantes de I Ching, tarô e vocabulário em inglês",
+  "home_description": "Guias simples da LC Lab: como consultar o I Ching, como aprender as cartas e tiragens do tarô e como decorar palavras em inglês ouvindo. Pratique com três apps para Android.",
+  "home_lead": "Um pequeno estúdio de apps tocado por uma pessoa só. Aqui explicamos o básico do I Ching, do tarô e do vocabulário em inglês. Quando quiser praticar, experimente o app correspondente.",
+  "articles": "Guias",
+  "download": "Baixe grátis no Google Play",
+  "download_cta": "Quer praticar? Baixe e use {app} de graça",
+  "reflection_note": "Este artigo é para autorreflexão e entretenimento.",
+  "ngsl_note": "Fonte da NGSL: Browne, C., Culligan, B., & Phillips, J. (2013). The New General Service List. newgeneralservicelist.com, sob licença CC BY-SA 4.0.",
+  "related": "Leia também",
+  "back_home": "Início",
+  "lang_name": "Português",
+  "other_langs": "Outros idiomas",
+  "apps": {
+    "iching": {
+      "name": "Qiangua",
+      "sub": "Cartas do I Ching",
+      "pitch": "Cartas de autorreflexão baseadas nos 64 hexagramas do I Ching, com método das moedas e Flor de Ameixeira."
+    },
+    "tarot": {
+      "name": "AuraSpica Tarot",
+      "sub": "Tarô · Lenormand · Runas",
+      "pitch": "Aprenda tarô, baralho cigano (Lenormand) e runas, com aulas para iniciantes e diário de tiragens."
+    },
+    "english": {
+      "name": "English Words Audio Cruise",
+      "sub": "Aprenda palavras ouvindo",
+      "pitch": "Aprenda as palavras essenciais do inglês ouvindo, mesmo com a tela bloqueada."
+    }
+  }
+}
