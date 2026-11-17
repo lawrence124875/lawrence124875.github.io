@@ -29,6 +29,12 @@ PLAY = {
     "english": "https://play.google.com/store/apps/details?id=tw.bcc.englishapp",
 }
 REFLECTION_APPS = {"iching", "tarot"}
+# Google Play store-page language (hl=) per site language.
+PLAY_HL = {"zh-TW": "zh-TW", "zh-CN": "zh-CN", "pt": "pt-BR"}
+
+
+def play(app, lang):
+    return f"{PLAY[app]}&hl={PLAY_HL.get(lang, lang)}"
 # Paths at the repo root that are not part of the published site.
 SKIP = {".git", ".github", "_site", "src", "build.py", "HANDOFF.md", "README.md", ".gitignore"}
 
@@ -53,6 +59,8 @@ def parse(path):
         if not meta.get(key):
             sys.exit(f"{path}: missing '{key}' in front matter")
     meta["order"] = int(meta.get("order", 99))
+    # Optional "apps: iching, tarot" adds a download button for each listed app.
+    meta["apps"] = [a.strip() for a in meta.get("apps", "").split(",") if a.strip()]
     meta["body"] = text.strip()
     return meta
 
@@ -64,7 +72,9 @@ def load_articles():
             app, slug = p.parent.name, p.stem
             if app not in PLAY:
                 sys.exit(f"{p}: unknown app folder '{app}'")
-            arts[(lang, app, slug)] = parse(p)
+            arts[(lang, app, slug)] = meta = parse(p)
+            if any(a not in PLAY for a in meta["apps"]):
+                sys.exit(f"{p}: unknown app in 'apps'")
     return arts
 
 
@@ -120,7 +130,7 @@ def cta(lang, app):
     return f"""<aside class="cta">
 <p class="cta-title">{esc(t['download_cta'].format(app=a['name']))}</p>
 <p>{esc(a['pitch'])}</p>
-<a class="btn" href="{PLAY[app]}" rel="noopener">{esc(t['download'])}</a>
+<a class="btn" href="{play(app, lang)}" rel="noopener">{esc(t['download'])}</a>
 </aside>"""
 
 
@@ -161,7 +171,7 @@ def build():
 {top_note}
 {content}
 {source_note}
-{cta(lang, app)}
+{"".join(cta(lang, a) for a in (m["apps"] or [app]))}
 </article>
 """ + (f"<section><h2>{esc(t['related'])}</h2>{article_list(lang, related)}</section>" if related else "")
         out = OUT / lang / app / slug / "index.html"
@@ -178,7 +188,7 @@ def build():
 <h2>{esc(a['name'])} <span class="sub">{esc(a['sub'])}</span></h2>
 <p>{esc(a['pitch'])}</p>
 {article_list(lang, items) if items else ''}
-<a class="btn" href="{PLAY[app]}" rel="noopener">{esc(t['download'])}</a>
+<a class="btn" href="{play(app, lang)}" rel="noopener">{esc(t['download'])}</a>
 </section>""")
         body = f"<h1>{esc(t['site_name'])}</h1>\n<p class=\"lead\">{esc(t['home_lead'])}</p>\n" + "\n".join(cards)
         variants = {l: url(l) for l in LANGS}
