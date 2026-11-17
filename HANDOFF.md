@@ -12,6 +12,7 @@
   - 塔羅、易經文章自動加「供自我反思與娛樂」；內文出現 NGSL 時自動加出處
   - 文末下載按鈕與延伸閱讀自動產生
 - `src/style.css`：共用樣式，內嵌進每頁，不放追蹤碼
+- `tools/og.py`：產生 `og/` 分享預覽圖（不複製進 `_site`，`og/` 會）
 - `.github/workflows/site.yml`：PR 只建置並檢查 title、description、canonical、hreflang、sitemap；推到 main 後部署 Pages
 
 ## 原則
@@ -20,19 +21,9 @@
 - 開新分支發 PR，不直接推 main
 
 ## 進度
-- 11 語 × 19 篇全部寫完，各自一個 draft PR，base 都是 `content-site`：
-  繁中＋英文 #13（content-site → main）、日 #14、韓 #15、簡中 #16、西 #17、葡 #18、印尼 #19、泰 #20、越 #21、阿 #22
-- #22 另含 RTL 小修：`style.css` 改用 `border/padding-inline-start`、`build.py` 的 RTL 麵包屑改用 ‹
-
-## 合併順序
-1. 先把 #14–#22 合併進 `content-site`（各 PR 只動自己的語言檔，不會互相衝突）
-2. 再合併 #13 到 main（合併前先做下方手動事項 1）
+- 已上線：11 語 × 19 篇，推到 main 後由 Actions 部署 Pages
+- Search Console 已驗證並提交 sitemap；Bing 從 Search Console 匯入；Naver 已驗證。驗證 meta 放在根目錄 `index.html` 的 head
+- 分享預覽圖：`og/<home|iching|tarot|english>.png`（1200×630，英文字，各語言共用），由 `python tools/og.py` 產生；`build.py` 依文章分類自動帶 og:image 與 twitter:card，語言首頁用 home
 
 ## 後續可做
-- Search Console 有數據後，依各國曝光補文章或調整標題
-
-## 使用者手動事項
-1. **Pages 來源**：repo Settings → Pages → Build and deployment → Source 改成「GitHub Actions」（合併 PR 前做）
-2. **Search Console 驗證**：到 https://search.google.com/search-console 新增資源，選「網址前置字元」填 `https://lawrence124875.github.io/`，驗證方式選「HTML 標記」，把 meta 標籤內容交給 Claude 加進 `build.py`（或選「HTML 檔案」，把檔案放到 repo 根目錄）
-3. **提交 sitemap**：驗證後在 Search Console →「Sitemap」提交 `sitemap.xml`
-4. 約 4–6 週後看「成效」報表，各國家的曝光可作為後續語言優先順序的參考
+- 約 4–6 週後看 Search Console「成效」報表，依各國曝光補文章或調整標題，並作為語言優先順序參考

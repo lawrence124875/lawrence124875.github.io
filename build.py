@@ -30,7 +30,7 @@ PLAY = {
 }
 REFLECTION_APPS = {"iching", "tarot"}
 # Paths at the repo root that are not part of the published site.
-SKIP = {".git", ".github", "_site", "src", "build.py", "HANDOFF.md", "README.md", ".gitignore"}
+SKIP = {".git", ".github", "_site", "src", "tools", "build.py", "HANDOFF.md", "README.md", ".gitignore"}
 
 LANGS = dict(sorted(
     ((p.stem, json.loads(p.read_text(encoding="utf-8"))) for p in (SRC / "langs").glob("*.json")),
@@ -86,7 +86,7 @@ def lang_switch(lang, variants):
     return f'<nav class="langs" aria-label="{esc(LANGS[lang]["other_langs"])}">{" · ".join(links)}</nav>' if links else ""
 
 
-def page(lang, title, description, canonical, variants, body):
+def page(lang, title, description, canonical, variants, body, og="home"):
     t = LANGS[lang]
     return f"""<!DOCTYPE html>
 <html lang="{t['html_lang']}" dir="{t.get('dir', 'ltr')}">
@@ -101,6 +101,10 @@ def page(lang, title, description, canonical, variants, body):
 <meta property="og:description" content="{esc(description)}">
 <meta property="og:url" content="{canonical}">
 <meta property="og:type" content="website">
+<meta property="og:image" content="{BASE}/og/{og}.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
 <style>{CSS}</style>
 </head>
 <body>
@@ -166,7 +170,7 @@ def build():
 """ + (f"<section><h2>{esc(t['related'])}</h2>{article_list(lang, related)}</section>" if related else "")
         out = OUT / lang / app / slug / "index.html"
         out.parent.mkdir(parents=True, exist_ok=True)
-        out.write_text(page(lang, m["title"], m["description"], variants[lang], variants, body), encoding="utf-8")
+        out.write_text(page(lang, m["title"], m["description"], variants[lang], variants, body, app), encoding="utf-8")
         sitemap.append((variants[lang], variants))
 
     for lang, t in LANGS.items():
